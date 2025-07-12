@@ -30,11 +30,11 @@ export default function App() {
         startGame={() => setGameInProgress(true)}
       ></StartScreen>
 
-      {gameInProgress && (
-        <>
+      
             <SuccessScreen gameState={gameState}></SuccessScreen>
           <Background gameState = {gameState}></Background>
-          <Game
+          {gameInProgress && (
+        <><Game
             gameState = {gameState}
             cards={cardList}
             addScore={async () => {
@@ -49,6 +49,9 @@ export default function App() {
               setGameState("gameOver");
               await delay(3000);
               setGameInProgress(false);
+              await delay(3000);
+              setGameState("none")
+              
             }}
           ></Game>
         </>

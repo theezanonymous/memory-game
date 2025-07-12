@@ -18,6 +18,15 @@
 
 .pbTop,.pbBottom{
     width: 25vw; object-fit: contain;
+    transition: 0.5s ease-in-out;
+
+}
+
+.pbTop{
+    transform-origin: bottom center;
+}
+.pbBottom{
+    transform-origin: top center;
 }
 
 .startTop, .startBottom{
@@ -44,7 +53,6 @@
 
 .startText{
     margin:auto;
-    transition: none;
     position: absolute;
     top: 20vh;
 }
