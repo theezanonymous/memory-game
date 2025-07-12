@@ -1,0 +1,15 @@
+:root{
+    --gameStartDelay: 3s;
+    --gameEndDelay: 5s;
+}
+body{ 
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; align-items: center;
+    width: 100vw;
+}
+@font-face {
+    font-family: 'retro';
+    src: url('./retro.ttf') format('truetype');
+  }

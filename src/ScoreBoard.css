@@ -1,0 +1,19 @@
+.scoreBoard{
+    font-family: 'retro';
+    display: grid; 
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: 2vh; height: 6vh;
+    text-align: end;
+    column-gap: 1vw; 
+}
+.scoreBoard img{
+    width: 2vw;
+    object-fit: contain;
+}
+.scoreBoard img:nth-child(2){
+    scale: 0.8;
+}

@@ -1,0 +1,76 @@
+:root{
+    --cardWidth: 200px;
+}
+.flip-card *{
+    transition: transform 0.8s;
+}
+.flip-card{
+    box-sizing: border-box;
+    height: calc(var(--cardWidth)*1.385); width: var(--cardWidth);
+    display: flex; 
+
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer; 
+}
+
+
+.flip-card img{
+    margin: auto; scale: 1.4;
+    
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+  }
+
+/* .card:hover{
+    animation: 1s flip;
+} */
+.flip-card.flip .flip-card-inner {
+    transform: rotateY(180deg);
+    /* box-shadow: black 4px 4px 10px; */
+  }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+.flip-card-front{
+    object-fit: cover; background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-size: cover;
+    border: yellow 8px solid;
+    box-shadow: black 2px 2px 4px;
+    border-radius: 2.5mm;
+    background-image: url("./background-grass.png");
+
+    display: flex; align-items: center; justify-content: center;
+}
+.flip-card-front:hover{
+    box-shadow: black 4px 4px 10px;
+}
+.flip-card-back{
+   border-radius: 3.8mm;
+    scale: 1.05;
+    background-image: url("./cardBack.jpg");
+    background-size: contain; object-fit:contain;
+    background-repeat: no-repeat;
+    transform: rotateY(180deg);
+}
+@keyframes flip{
+    0%{
+
+    }
+    50%{
+        transform: rotateY(90deg) scale(1.1);
+    }
+    to{
+        transform: rotateY(180deg) 
+    }
+}

@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'pokemonFont';
+    src: url('./pokemon/hollow.ttf') format('truetype');
+  }
+.appHeader{
+    z-index: 99;
+    margin: 0;
+    font-family: 'pokemonFont';
+    text-shadow: black 3px 3px 3px;
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: 10vh; 
+    box-sizing: border-box;
+    font-size: 5vh;
+    padding: 6vh 2vw 9vh 2vh;
+    display: flex; justify-content: space-between;
+    align-items: center;
+
+}

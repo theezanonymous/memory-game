@@ -1,0 +1,120 @@
+.background {
+  background-image: url("./retroBackground.jpg");
+  position: fixed;
+  width: 300%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: repeat-x;
+  animation: 20s var(--gameStartDelay) ease-out infinite backgroundScroll;
+  display: flex;
+}
+.latios,
+.latias{
+  position: fixed;
+  width: 5vw;
+  height: 5vh; background-size: contain; background-repeat: no-repeat;
+  object-fit: cover;
+}
+.latios.gameInProgress, .latias.gameInProgress{
+    animation: var(--gameStartDelay) linear fly-in, 15s var(--gameStartDelay) alternate linear infinite flying,
+    20s var(--gameStartDelay) alternate ease-in-out infinite flapping;
+}
+.latios.gameOver, .latias.gameOver{
+    transform-origin: 0 4vh;
+    animation: 5s linear crash;
+    animation-fill-mode: forwards;
+}
+.latios.gameOver{
+    background-image: url("./latios-hurt.png")
+}
+.latias.gameOver{
+    background-image: url("./latias-hurt.png")
+}
+
+.latios {
+  top: 53vh;
+  left: 38vw;
+  background-image: url("./latios-flying.png");
+}
+.latias {
+  top: 54vh;
+  left: 45vw;
+  background-image: url("./latias-flying.png");
+}
+@keyframes fly-in{
+    0%{
+        transform: translateX(50vw);
+    }
+    60%{
+        transform: translateX(0) rotate(0deg);
+
+    }
+    100%{
+        transform-origin: 0px -10vh;
+        transform: translateX(0) rotate(360deg);
+    }
+}
+@keyframes flapping {
+  20% {
+    transform: rotateX(40deg);
+  }
+
+  50% {
+    transform: rotateX(0);
+  }
+
+  70% {
+    transform: rotateX(-40deg);
+  }
+
+  90% {
+    transform: rotateX(0deg);
+  }
+}
+@keyframes flying {
+  20% {
+    transform: translateX(8px);
+  }
+  30% {
+    transform: translateX(0px);
+  }
+  40% {
+    transform: translateY(-6px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateX(-8px);
+  }
+  70%{
+    transform: translateY(6px);
+  }
+  80% {
+    transform: translateX(0px);
+  }
+}
+@keyframes backgroundScroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 2000px 0; /* Adjust to match your image/desired scroll distance */
+  }
+}
+@keyframes crash{
+    from{
+        transform: translate(0,0);
+    }
+    20%{
+        transform: translateX(20vw) translateY(38vh) rotateZ(0); 
+    }
+    30%{
+        transform: translateX(30vw) translateY(30vh) rotateZ(360deg);
+    }
+    100%{
+        transform: translateX(100vw) translateY(10vh) rotateZ(3000deg);
+    }
+
+
+}

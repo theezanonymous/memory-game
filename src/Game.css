@@ -1,0 +1,11 @@
+.cardContainer{
+    /* background-image: url("background.png"); */
+    width: 100vw; height: 100vh;
+    box-sizing: border-box;
+    display:flex;
+    flex-wrap: wrap;
+    padding: 4vh 8vw 0 8vw;
+    row-gap: 30px; column-gap: 40px;
+    margin: auto;
+    
+}
