@@ -13,7 +13,9 @@
     perspective: 1000px;
     cursor: pointer; 
 }
-
+.flip-card.flip{
+    pointer-events: none;
+}
 
 .flip-card img{
     margin: auto; scale: 1.4;
