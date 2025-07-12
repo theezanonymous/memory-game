@@ -32,7 +32,7 @@ export default function App() {
 
       
             <SuccessScreen gameState={gameState}></SuccessScreen>
-          <Background gameState = {gameState}></Background>
+          <Background gameInProgress = {gameInProgress} gameState = {gameState}></Background>
           {gameInProgress && (
         <><Game
             gameState = {gameState}

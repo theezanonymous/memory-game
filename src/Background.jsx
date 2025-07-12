@@ -1,9 +1,9 @@
 import './Background.css'
-export default function Background({gameState}){
+export default function Background({gameInProgress, gameState}){
     return (
         <div className = "background">
-            <span className={"latios" +(gameState=="gameOver"? " gameOver":" gameInProgress")}></span>
-            <span className={"latias" +(gameState=="gameOver"? " gameOver":" gameInProgress")}></span>
+            {gameInProgress&&<span className={"latios" +(gameState=="gameOver"? " gameOver":" gameInProgress")}></span>}
+            {gameInProgress&&<span className={"latias" +(gameState=="gameOver"? " gameOver":" gameInProgress")}></span>}
         </div>
     )
 }
