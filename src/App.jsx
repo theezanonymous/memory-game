@@ -38,13 +38,14 @@ export default function App() {
             gameState = {gameState}
             cards={cardList}
             addScore={async () => {
+                
               setScore(score + 1);
+              setHighScore(Math.max(highScore, score+1));
               setGameState("success");
               await delay(2000);
               setGameState("none")
             }}
             gameOver={async () => {
-              setHighScore(Math.max(highScore, score));
               setScore(0);
               setGameState("gameOver");
               await delay(3000);

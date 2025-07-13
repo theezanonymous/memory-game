@@ -62,15 +62,15 @@
 
 @keyframes blinking{
     0%{
-        color: white;
+        opacity: 1;
     }
     49%{
-        color: white;
+        opacity: 1;
     }
     50%{
-        color: black;
+        opacity: 0;
     }
     100%{
-        color: black;
+       opacity:0;
     }
 }
